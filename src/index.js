@@ -36,23 +36,18 @@ function onChangeLightTheme(evt) {
 
         
     localStorage.setItem('Theme', bodyEl.className);
-    localStorage.setItem('checkBox', document.querySelector('#theme-switch-toggle').checked);
-
 }
 
 function populateBodyClass() {
     const savedBodyClass = localStorage.getItem('Theme');
-    const savedCheckBoxCheked = localStorage.getItem('checkBox');
     
-   
-
     if (savedBodyClass) {
         console.log(savedBodyClass);
         bodyEl.className = savedBodyClass;
     }
 
     if (bodyEl.classList.contains(Theme.DARK)) {
-        document.querySelector('#theme-switch-toggle').checked = savedCheckBoxCheked;
+        document.querySelector('#theme-switch-toggle').checked = true;
     } 
 }
 
