@@ -42,7 +42,6 @@ function populateBodyClass() {
     const savedBodyClass = localStorage.getItem('Theme');
     
     if (savedBodyClass) {
-        console.log(savedBodyClass);
         bodyEl.className = savedBodyClass;
     }
 
